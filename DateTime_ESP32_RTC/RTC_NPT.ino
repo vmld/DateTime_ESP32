@@ -19,7 +19,7 @@ uint32_t readNTPTimeDate() {
   while (!timeClient.update()) {
     ++count;
     timeClient.forceUpdate();
-    if (count>10){break;}
+    if (count>10){
   }
   return timeClient.getEpochTime();
 }
